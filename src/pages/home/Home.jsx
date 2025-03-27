@@ -3,22 +3,22 @@ import { Avatar } from "@mui/material";
 import CreateTweet from "../../components/createTweets";
 import Tweet from "../../components/tweet";
 import Header from "../../components/header";
-import { SignedIn, UserButton, useUser } from "@clerk/clerk-react";
+import { SignedIn, UserButton, UserProfile, useUser } from "@clerk/clerk-react";
 
 const Home = ({ loggedUser }) => {
   const [tweet, setTweet] = useState();
   const [tweets, setTweets] = useState([]);
   const [comment, setComment] = useState(false);
 
-  const { user } = useUser();
+  const { user, isLoaded, isSignedIn } = useUser();
 
-  // if (isLoaded) {
-  //   return <div className="">Loading ...</div>;
-  // }
+  if (!isLoaded) {
+    <div className="">Loading...</div>;
+  }
 
-  // if (isSignedIn) {
-  //   return <div className="">You need to Sign In ...!</div>;
-  // }
+  if (!isSignedIn) {
+    return <div className="">You need to Sign In ...!</div>;
+  }
 
   const handleCommSec = () => {
     setComment(!comment);
@@ -31,7 +31,7 @@ const Home = ({ loggedUser }) => {
         <Header />
         <p className="text-[24px]">{user.firstName}</p>
         <p className="ml-2 text-gray-400 text-center text-[14px] flex items-center">
-          @{user.lastName}
+          {user.lastName}
         </p>
       </div>
 
