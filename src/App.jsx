@@ -14,7 +14,7 @@ function App() {
         path="/"
         element={
           <div className="flex flex-col w-[100vw] h-[100vh]">
-            <Home />
+            <LandingPage />
           </div>
         }
       />
