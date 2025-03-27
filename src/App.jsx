@@ -1,11 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 
-import SignUp from "./pages/auths/sign-up/page";
-import Home from "./pages/home/page";
-
 import "./index.css";
-import LandingPage from "./pages/landingPage/page";
-import SignInPage from "./pages/auths/sign-in/Page";
+import LandingPage from "./pages/landingPage/LandingPage";
+import SignUpPage from "./pages/auths/sign-up/Sign-Up";
+import SignInPage from "./pages/auths/sign-in/Sign-In";
+import Home from "./pages/home/Home";
 
 function App() {
   return (
@@ -22,7 +21,7 @@ function App() {
         path="/signup"
         element={
           <div className="flex flex-col w-[100vw] h-[100vh]">
-            <SignUp />
+            <SignUpPage />
           </div>
         }
       />
