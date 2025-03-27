@@ -4,6 +4,7 @@ import CreateTweet from "../../components/createTweets";
 import Tweet from "../../components/tweet";
 import Header from "../../components/header";
 import { SignedIn, UserButton, UserProfile, useUser } from "@clerk/clerk-react";
+import { useNavigate } from "react-router-dom";
 
 const Home = ({ loggedUser }) => {
   const [tweet, setTweet] = useState();
@@ -12,12 +13,19 @@ const Home = ({ loggedUser }) => {
 
   const { user, isLoaded, isSignedIn } = useUser();
 
+  const navigate = useNavigate();
+
   if (!isLoaded) {
     <div className="">Loading...</div>;
   }
 
   if (!isSignedIn) {
-    return <div className="">You need to Sign In ...!</div>;
+    return (
+      <div className="">
+        You need to Sign In ...!{" "}
+        <button onClick={() => navigate("/singin")}>SignIn</button>
+      </div>
+    );
   }
 
   const handleCommSec = () => {
@@ -36,9 +44,9 @@ const Home = ({ loggedUser }) => {
       </div>
 
       <SignedIn>
-        <div className="">
-          <UserButton />
-        </div>
+        {/* <div className=""> */}
+        <UserButton className="flex justify-evenly items-center w-full h-fit" />
+        {/* </div> */}
       </SignedIn>
       <CreateTweet
         tweet={tweet}
