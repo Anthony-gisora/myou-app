@@ -36,7 +36,9 @@ const Home = ({ loggedUser }) => {
       </div>
 
       <SignedIn>
-        <UserButton />
+        <div className="">
+          <UserButton />
+        </div>
       </SignedIn>
       <CreateTweet
         tweet={tweet}
