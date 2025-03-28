@@ -1,4 +1,4 @@
-import { Avatar } from "@mui/material";
+import SendIcon from "@mui/icons-material/Send";
 
 const CreateTweet = ({ tweet, setTweet, tweets, setTweets }) => {
   const handleSubmit = (ev) => {
@@ -13,8 +13,6 @@ const CreateTweet = ({ tweet, setTweet, tweets, setTweets }) => {
 
   return (
     <div className="flex w-full md:w-[80%] h-[25%] mx-auto p-4 border-b border-[#50b7f5]">
-      {/* <Avatar /> */}
-      {/* <Header /> */}
       <form
         onSubmit={(ev) => handleSubmit(ev)}
         className="flex flex-col p-1  w-[90%]  "
@@ -30,9 +28,9 @@ const CreateTweet = ({ tweet, setTweet, tweets, setTweets }) => {
         />
         <button
           type="submit"
-          className="self-end my-3 mr-6 border rounded-md px-3 bg-[#50b7f5] text-[20px] text-[#ffff] font-[500]"
+          className="self-end my-3 mr-6 border rounded-md px-3 bg-[#50b7f5] text-[20px] text-[#ffff] font-[500] flex justify-center items-center"
         >
-          Tweet
+          <SendIcon />
         </button>
       </form>
     </div>

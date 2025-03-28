@@ -36,18 +36,17 @@ const Home = ({ loggedUser }) => {
     <div className="bg-[#e6ecf0] w-full md:w-[40%] md:h-[95%] h-full my-auto mx-auto flex flex-col">
       <div className="m-3 text-lg font-semibold flex w-[40%] items-baseline ">
         {/* <Avatar className="mr-6" /> */}
-        <Header />
+        <div className="flex justify-evenly items-center w-full h-fit">
+          <SignedIn>
+            <Header />
+          </SignedIn>
+        </div>
         <p className="text-[24px]">{user.firstName}</p>
         <p className="ml-2 text-gray-400 text-center text-[14px] flex items-center">
-          {user.lastName}
+          @{user.lastName}
         </p>
       </div>
 
-      <SignedIn>
-        {/* <div className=""> */}
-        <UserButton className="flex justify-evenly items-center w-full h-fit" />
-        {/* </div> */}
-      </SignedIn>
       <CreateTweet
         tweet={tweet}
         setTweet={setTweet}
