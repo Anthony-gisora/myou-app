@@ -1,4 +1,4 @@
-# React + Vite
+# myou-app
 
 This is a social media application where someone can post some text content and someone else is able to share their feeling on the post and make some interaction.
 
