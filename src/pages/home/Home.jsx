@@ -11,13 +11,9 @@ const Home = ({ loggedUser }) => {
   const [tweets, setTweets] = useState([]);
   const [comment, setComment] = useState(false);
 
-  const { user, isLoaded, isSignedIn } = useUser();
+  const { user, isSignedIn } = useUser();
 
   const navigate = useNavigate();
-
-  if (!isLoaded) {
-    <div className="">Loading...</div>;
-  }
 
   if (!isSignedIn) {
     return (
