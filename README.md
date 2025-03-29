@@ -1,12 +1,15 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a social media application where someone can post some text content and someone else is able to share their feeling on the post and make some interaction.
 
-Currently, two official plugins are available:
+The development is still on going, but some of the features that are fuctional are as follows:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Create and account and login](https://myou-app.netlify.app/) that is through:</br>
+  1. Email and Password.
+  2. Your Google account.
+  3. Your GitHub account.
+  4. An apple account.
+  5. Facebook account.
+- [You can view and update your profile](https://myou-app.netlify.app/home)
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## More is comming stick along...

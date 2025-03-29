@@ -1,5 +1,5 @@
 import { SignUp } from "@clerk/clerk-react";
 
-const SignUpPage = () => <SignUp afterSignUpUrl="/home" />;
+const SignUpPage = () => <SignUp />;
 
 export default SignUpPage;
