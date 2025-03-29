@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Avatar } from "@mui/material";
 import CreateTweet from "../../components/createTweets";
 import Tweet from "../../components/tweet";
 import Header from "../../components/header";
