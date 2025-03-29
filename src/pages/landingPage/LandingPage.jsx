@@ -12,8 +12,11 @@ const LandingPage = () => {
   };
 
   return (
-    <div className="bg-[#e6ecf0] w-full md:w-[40%] md:h-[95%] h-full my-auto mx-auto flex flex-col items-center">
-      <div className="h-full w-full flex flex-col space-y-[6px] items-center justify-center">
+    <div className="bg-[#e6ecf0] w-full md:w-[40%] md:h-[95%] h-full my-auto mx-auto flex flex-col items-center justify-evenly">
+      <div className="h-[95%] w-full flex flex-col space-y-[6px] items-center justify-center">
+        <h1 className="text-3xl font-extrabold text-[#50b7f5] mb-[20%]">
+          myou
+        </h1>
         <button
           type="submit"
           className="rounded-[30px] bg-[#50b7f5] min-w-fit w-[40%] "
@@ -25,7 +28,7 @@ const LandingPage = () => {
         </button>
         <button
           type="submit"
-          className="rounded-sm bg-[#05051f] text-[#ffff] min-w-fit w-[60%] "
+          className="rounded-[30px] bg-[#50b7f5] min-w-fit w-[40%]"
           onClick={() => {
             handleLogIN();
           }}
