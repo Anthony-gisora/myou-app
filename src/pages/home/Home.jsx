@@ -2,7 +2,7 @@ import { useState } from "react";
 import CreateTweet from "../../components/createTweets";
 import Tweet from "../../components/tweet";
 import Header from "../../components/header";
-import { SignedIn, UserButton, UserProfile, useUser } from "@clerk/clerk-react";
+import { SignedIn, useUser } from "@clerk/clerk-react";
 import { useNavigate } from "react-router-dom";
 
 const Home = ({ loggedUser }) => {
