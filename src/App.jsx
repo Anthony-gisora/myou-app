@@ -13,7 +13,7 @@ function App() {
       <Route
         path="/"
         element={
-          <div className="flex flex-col w-full h-[100vh]">
+          <div className="flex flex-col w-[100vw] h-[100vh]">
             <SignedIn>
               <Home />
             </SignedIn>
@@ -26,7 +26,7 @@ function App() {
       <Route
         path="/signup"
         element={
-          <div className="flex flex-col w-full h-full">
+          <div className="flex flex-col w-[100vw] h-[100vh]">
             <SignUpPage />
           </div>
         }
@@ -34,7 +34,7 @@ function App() {
       <Route
         path="/signin"
         element={
-          <div className="flex flex-col w-full h-full">
+          <div className="flex flex-col w-[100vw] h-[100vh]">
             <SignInPage />
           </div>
         }
@@ -42,7 +42,7 @@ function App() {
       <Route
         path="/home"
         element={
-          <div className="flex flex-col w-full h-[100vh]">
+          <div className="flex flex-col w-[100vw] h-[100vh]">
             <Home />
           </div>
         }
