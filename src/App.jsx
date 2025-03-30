@@ -26,7 +26,7 @@ function App() {
       <Route
         path="/signup"
         element={
-          <div className="flex flex-col w-[100vw] h-[100vh]">
+          <div className="flex flex-col w-[100vw]  h-[100vh]">
             <SignUpPage />
           </div>
         }
