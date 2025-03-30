@@ -23,7 +23,7 @@ const CreateTweet = ({ tweet, setTweet, tweets, setTweets }) => {
           type="text"
           value={tweet}
           onChange={(e) => setTweet(e.target.value)}
-          placeholder="Create Tweet"
+          placeholder="Hey send it..."
           className="focus:outline-none p-2 resize-none bg-[#fdfdfd]"
         />
         <button
