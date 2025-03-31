@@ -10,14 +10,22 @@ const Home = ({ loggedUser }) => {
   const [pops, setPops] = useState([]);
   const [comment, setComment] = useState(false);
 
-  const { user, isSignedIn } = useUser();
+  const { user, isSignedIn, isLoaded } = useUser();
 
   const navigate = useNavigate();
+
+  if (!isLoaded) {
+    return (
+      <div className="h-full w-full flex flex-col justify-center items-center">
+        Loading ...!
+      </div>
+    );
+  }
 
   if (!isSignedIn) {
     return (
       <div className="">
-        You need to Sign In ...!{" "}
+        You need to Sign In ...!
         <button onClick={() => navigate("/singin")}>SignIn</button>
       </div>
     );
