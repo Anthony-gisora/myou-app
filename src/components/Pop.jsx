@@ -7,7 +7,7 @@ import {
 import { Avatar } from "@mui/material";
 import { useState } from "react";
 
-const Tweet = ({ handleCommSec, displayName, username, text }) => {
+const Pop = ({ handleCommSec, displayName, username, text }) => {
   const [love, setLove] = useState(false);
   const handleLove = () => {
     setLove(!love);
@@ -54,4 +54,4 @@ const Tweet = ({ handleCommSec, displayName, username, text }) => {
   );
 };
 
-export default Tweet;
+export default Pop;

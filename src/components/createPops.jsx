@@ -1,14 +1,11 @@
 import SendIcon from "@mui/icons-material/Send";
 
-const CreateTweet = ({ tweet, setTweet, tweets, setTweets }) => {
+const CreatePop = ({ pop, setPop, pops, setPops }) => {
   const handleSubmit = (ev) => {
     ev.preventDefault();
-    tweet !== "" &&
-      setTweets([
-        ...tweets,
-        { dName: "Tonny", uName: "@tonny_g", text: tweet },
-      ]);
-    setTweet("");
+    pop !== "" &&
+      setPops([...pops, { dName: "Tonny", uName: "@tonny_g", pop: pop }]);
+    setPop("");
   };
 
   return (
@@ -21,8 +18,8 @@ const CreateTweet = ({ tweet, setTweet, tweets, setTweets }) => {
           cols="9"
           rows="5"
           type="text"
-          value={tweet}
-          onChange={(e) => setTweet(e.target.value)}
+          value={pop}
+          onChange={(e) => setPop(e.target.value)}
           placeholder="Hey send it..."
           className="focus:outline-none p-2 resize-none bg-[#fdfdfd]"
         />
@@ -37,4 +34,4 @@ const CreateTweet = ({ tweet, setTweet, tweets, setTweets }) => {
   );
 };
 
-export default CreateTweet;
+export default CreatePop;

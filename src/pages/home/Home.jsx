@@ -1,13 +1,13 @@
 import { useState } from "react";
-import CreateTweet from "../../components/createTweets";
-import Tweet from "../../components/tweet";
+import CreateTweet from "../../components/createPops";
+import Pop from "../../components/Pop";
 import Header from "../../components/header";
 import { SignedIn, useUser } from "@clerk/clerk-react";
 import { useNavigate } from "react-router-dom";
 
 const Home = ({ loggedUser }) => {
-  const [tweet, setTweet] = useState();
-  const [tweets, setTweets] = useState([]);
+  const [pop, setPop] = useState();
+  const [pops, setPops] = useState([]);
   const [comment, setComment] = useState(false);
 
   const { user, isSignedIn } = useUser();
@@ -43,24 +43,24 @@ const Home = ({ loggedUser }) => {
       </div>
 
       <CreateTweet
-        tweet={tweet}
-        setTweet={setTweet}
-        tweets={tweets}
-        setTweets={setTweets}
+        tweet={pop}
+        setTweet={setPop}
+        tweets={pops}
+        setTweets={setPops}
       />
       <div className="overflow-auto h-[75%] space-y-2 flex-col-reverse flex ">
-        {tweets &&
-          tweets.map((twt, index) => {
+        {pops &&
+          pops.map((pop, index) => {
             return (
-              <Tweet
+              <Pop
                 key={index}
                 indx={index}
-                twt={tweets}
+                pop={pops}
                 comment={comment}
                 handleCommSec={handleCommSec}
                 displayName={loggedUser.username}
                 username={`@${loggedUser.handle}`}
-                text={twt.text}
+                text={pop.text}
               />
             );
           })}
