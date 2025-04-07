@@ -1,18 +1,15 @@
 import SendIcon from "@mui/icons-material/Send";
 
-const CreatePop = ({ pop, setPop, pops, setPops }) => {
+const CreatePop = ({ pop, setPop }) => {
   const handleSubmit = (ev) => {
     ev.preventDefault();
-    pop !== "" &&
-      setPops([...pops, { dName: "Tonny", uName: "@tonny_g", pop: pop }]);
-    setPop("");
   };
 
   return (
     <div className="flex w-full md:w-[80%] h-[25%] mx-auto p-4 border-b border-[#50b7f5]">
       <form
         onSubmit={(ev) => handleSubmit(ev)}
-        className="flex flex-col p-1  w-[90%]  "
+        className="flex flex-col p-1  w-[90%] "
       >
         <textarea
           cols="9"

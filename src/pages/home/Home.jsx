@@ -5,12 +5,14 @@ import Header from "../../components/header";
 import { SignedIn, useUser } from "@clerk/clerk-react";
 import { useNavigate } from "react-router-dom";
 
+import logo from "../../assets/logo.png";
+
 const Home = ({ loggedUser }) => {
   const [pop, setPop] = useState();
   const [pops, setPops] = useState([]);
   const [comment, setComment] = useState(false);
 
-  const { user, isSignedIn, isLoaded } = useUser();
+  const { isSignedIn, isLoaded } = useUser();
 
   const navigate = useNavigate();
 
@@ -37,17 +39,23 @@ const Home = ({ loggedUser }) => {
 
   return (
     <div className="bg-[#e6ecf0] w-full md:w-[40%] md:h-[95%] h-full my-auto mx-auto flex flex-col">
-      <div className="m-3 text-lg font-semibold flex w-[40%] items-baseline ">
+      <div className="p-[10px]  text-lg font-semibold flex justify-between items-center w-full items-baseline ">
         {/* <Avatar className="mr-6" /> */}
-        <div className="flex justify-evenly items-center w-full h-fit">
+        <div className="text-3xl ">
+          <p className="font-bold">
+            <img src={logo} alt="logo" width="40%" />
+            {/* <span className="font-sans">m</span>you */}
+          </p>
+        </div>
+        <div className="">
           <SignedIn>
             <Header />
           </SignedIn>
         </div>
-        <p className="text-[24px]">{user.firstName}</p>
+        {/* <p className="text-[24px]">{user.firstName}</p>
         <p className="ml-2 text-gray-400 text-center text-[14px] flex items-center">
           @{user.lastName}
-        </p>
+        </p> */}
       </div>
 
       <CreateTweet

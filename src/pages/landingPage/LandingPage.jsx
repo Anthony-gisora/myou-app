@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import logo from "../../assets/logo.png";
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -14,9 +15,10 @@ const LandingPage = () => {
   return (
     <div className="bg-[#e6ecf0] w-full md:w-[40%] md:h-[95%] h-full my-auto mx-auto flex flex-col items-center justify-evenly">
       <div className="h-[95%] w-full flex flex-col space-y-[6px] items-center justify-center">
-        <h1 className="text-3xl font-extrabold text-[#50b7f5] mb-[20%]">
+        {/* <h1 className="text-3xl font-extrabold text-[#50b7f5] mb-[20%]">
           myou
-        </h1>
+        </h1> */}
+        <img src={logo} alt="logo" width="40%" />
         <button
           type="submit"
           className="rounded-[30px] bg-[#50b7f5] min-w-fit w-[40%] "
