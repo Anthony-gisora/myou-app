@@ -39,7 +39,7 @@ const Home = ({ loggedUser }) => {
 
   return (
     <div className="bg-[#e6ecf0] w-full md:w-[40%] md:h-[95%] h-full my-auto mx-auto flex flex-col">
-      <div className="p-[10px]  text-lg font-semibold flex justify-between items-center w-full items-baseline ">
+      <div className="p-[15px]  text-lg font-semibold flex justify-between items-center w-full items-baseline ">
         {/* <Avatar className="mr-6" /> */}
         <div className="text-3xl ">
           <p className="font-bold">

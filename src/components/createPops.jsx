@@ -1,8 +1,13 @@
 import SendIcon from "@mui/icons-material/Send";
+import axios from "axios";
 
 const CreatePop = ({ pop, setPop }) => {
   const handleSubmit = (ev) => {
+    axios
+      .get("https://myou-server.onrender.com")
+      .then((data) => console.log(data.data));
     ev.preventDefault();
+    alert("You sent a pop...!");
   };
 
   return (
